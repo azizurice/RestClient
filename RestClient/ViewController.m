@@ -64,6 +64,10 @@
                                               [self processServerResponseUsingData:data];
                                               
                                           }];
+    // Display Temporary message
+    
+    NSString *tempMessage= [NSString stringWithFormat:@"%@%@%@",@"Hi ",name,@" Server response will be here!!"];
+    self.serverResponseLabel.text = tempMessage;
     
     // Step-3: Resume
     [dataTask setTaskDescription:@"getMessage"];
