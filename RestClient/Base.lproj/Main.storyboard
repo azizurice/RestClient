@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -57,15 +58,15 @@
                                 <exclude reference="9HN-os-qBf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1z8-k7-Z6C"/>
-                                <exclude reference="Y2R-ZV-HMj"/>
-                                <exclude reference="dMF-sg-Up6"/>
                                 <exclude reference="Iyj-7M-5u8"/>
                                 <exclude reference="MdH-it-pJp"/>
                                 <exclude reference="h8k-Iv-22q"/>
                                 <exclude reference="8cV-bH-N2R"/>
                                 <exclude reference="pXk-bt-rRO"/>
                                 <exclude reference="sT6-KS-3sW"/>
+                                <exclude reference="1z8-k7-Z6C"/>
+                                <exclude reference="Y2R-ZV-HMj"/>
+                                <exclude reference="dMF-sg-Up6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -75,15 +76,15 @@
                                 <include reference="9HN-os-qBf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1z8-k7-Z6C"/>
-                                <include reference="Y2R-ZV-HMj"/>
-                                <include reference="dMF-sg-Up6"/>
                                 <include reference="Iyj-7M-5u8"/>
                                 <include reference="MdH-it-pJp"/>
                                 <include reference="h8k-Iv-22q"/>
                                 <include reference="8cV-bH-N2R"/>
                                 <include reference="pXk-bt-rRO"/>
                                 <include reference="sT6-KS-3sW"/>
+                                <include reference="1z8-k7-Z6C"/>
+                                <include reference="Y2R-ZV-HMj"/>
+                                <include reference="dMF-sg-Up6"/>
                             </mask>
                         </variation>
                     </view>
