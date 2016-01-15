@@ -30,7 +30,8 @@
 - (IBAction)sendRequestButton:(id)sender {
     
     NSString *name = _nameTextField.text;
-    _serverResponseLabel.text = name;
+   
+    // Step-1: Built complete URL
     
     NSString *BASE_URL=@"http://dev.addictiveadsnetwork.com/api/v1/test/hello/";
     
@@ -59,12 +60,12 @@
                                                   }
                                               }
                                               
-                                              // 4: Handle server response
+                                              // Step-4: Handle server response
                                               [self processServerResponseUsingData:data];
                                               
                                           }];
     
-    // 3
+    // Step-3: Resume
     [dataTask setTaskDescription:@"getMessage"];
     [dataTask resume];
 }
@@ -77,13 +78,28 @@
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data
                                                              options:NSJSONReadingAllowFragments error:&parseJsonError];
     if (!parseJsonError) {
-        NSLog(@"json data = %@", jsonDict);
+        NSLog(@"json json data = %@", jsonDict);
         dispatch_async(dispatch_get_main_queue(), ^{
-            // self.currentConditionsLabel.text = jsonDict[@"success"];
-            //self.serverResponseLabel.text= @"test";
+            
+            Boolean success = [jsonDict[@"success"]boolValue];
+             NSLog(@"Success =%@",success? @"True": @"False");
+    
+            if (success){
             self.serverResponseLabel.text = jsonDict[@"data"][@"message"];
+           
+            
+               
+            } else{
+                NSNumber *code= jsonDict[@"error"][@"code"];
+                int statusCode=[code intValue];
+                NSLog(@"Status code =%d",statusCode);
+                if(statusCode == 400){
+                    self.serverResponseLabel.text=jsonDict[@"error"][@"message"];
+                }
+            
+            }
         });
-    }
+    } 
 }
 
 
