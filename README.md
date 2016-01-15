@@ -3,6 +3,11 @@
 A simple iOS app that consumes a RESTFul web service.
 
 
+** ScreenShots:
+
+Click here to see [Success Message](/docs/images/SuccessMessage.png) and [Error Message](/docs/images/ErrorMessage.png) 
+
+
 In this project, I didn’t use any 3rd party REST libraries like RestKit, nor did I use any dependency manager like Cocoapods or Carthage, which make our life easier. For this small project I have used NS* classes to handle REST API and JSON data. 
 
 
